@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Classic Black",
+    "price": "Rs. 2,499",
+    "image": "https://placehold.co/300x200?text=Frame+1"
+  },
+  {
+    "name": "Modern Brown",
+    "price": "Rs. 2,999",
+    "image": "https://placehold.co/300x200?text=Frame+2"
+  },
+  {
+    "name": "UV Sunglasses",
+    "price": "Rs. 1,799",
+    "image": "https://placehold.co/300x200?text=Sunglasses"
+  },
+  {
+    "name": "Blue Light Blockers",
+    "price": "Rs. 3,200",
+    "image": "https://placehold.co/300x200?text=Frame+3"
+  },
+  {
+    "name": "Kids Frame",
+    "price": "Rs. 1,299",
+    "image": "https://placehold.co/300x200?text=Kids+Frame"
+  },
+  {
+    "name": "Sporty Shades",
+    "price": "Rs. 2,199",
+    "image": "https://placehold.co/300x200?text=Sports"
+  }
+]
