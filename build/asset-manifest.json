@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a2e6495d.css",
-    "main.js": "/static/js/main.3057efbf.js",
-    "index.html": "/index.html",
-    "main.a2e6495d.css.map": "/static/css/main.a2e6495d.css.map",
-    "main.3057efbf.js.map": "/static/js/main.3057efbf.js.map"
+    "main.css": "/chashmagenie/static/css/main.c49c840f.css",
+    "main.js": "/chashmagenie/static/js/main.d535a960.js",
+    "static/media/banner.png": "/chashmagenie/static/media/banner.a60a680827bbf35127ec.png",
+    "static/media/pd_02.png": "/chashmagenie/static/media/pd_02.dafa09d1d76b90f57df6.png",
+    "static/media/pd_01.png": "/chashmagenie/static/media/pd_01.fb56d1aaccdb2c3adc5c.png",
+    "static/media/logo.png": "/chashmagenie/static/media/logo.1e7f1362298528dc929c.png",
+    "index.html": "/chashmagenie/index.html",
+    "main.c49c840f.css.map": "/chashmagenie/static/css/main.c49c840f.css.map",
+    "main.d535a960.js.map": "/chashmagenie/static/js/main.d535a960.js.map"
   },
   "entrypoints": [
-    "static/css/main.a2e6495d.css",
-    "static/js/main.3057efbf.js"
+    "static/css/main.c49c840f.css",
+    "static/js/main.d535a960.js"
   ]
 }
