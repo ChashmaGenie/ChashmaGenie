@@ -8,6 +8,7 @@ export const products = [
     description: "Timeless round metal frames with premium finish. Perfect for both formal and casual occasions. Features anti-glare coating and UV protection.",
     price: 7999,
     images: [pd01],
+    tags: ['sun-glasses', 'men'],
     features: [
       "Premium metal construction",
       "Anti-glare coating",
@@ -30,6 +31,7 @@ export const products = [
     description: "Contemporary square frames crafted from premium Italian acetate. Features blue light filtering and comes with a designer case.",
     price: 9999,
     images: [pd02],
+    tags: ['sun-glasses', 'women', 'lens'],
     features: [
       "Italian acetate material",
       "Blue light filtering",
