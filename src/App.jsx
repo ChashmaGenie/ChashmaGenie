@@ -14,6 +14,7 @@ import SignupPage from './pages/SignupPage';
 import AdminProductsPage from './pages/AdminProductsPage';
 import AdminOrdersPage from './pages/AdminOrdersPage';
 import ProductsPage from './pages/ProductsPage'; // <-- Use this instead of CatalogPage
+import CategoryPage from './pages/CategoryPage';
 
 const ProtectedAdmin = ({ children }) => {
   const { user } = React.useContext(AuthContext);
@@ -33,6 +34,7 @@ export default function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/products" element={<ProductsPage />} /> {/* Updated */}
                   <Route path="/products/:productId" element={<ProductPage />} />
+                  <Route path="/category/:tag" element={<CategoryPage />} />
                   <Route path="/cart" element={<CartPage />} />
                   <Route path="/checkout" element={<CheckoutPage />} />
                   <Route path="/login" element={<LoginPage />} />

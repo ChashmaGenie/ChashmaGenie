@@ -29,6 +29,30 @@ export default function Header() {
             Shop
           </Link>
           <Link
+            to="/category/sun-glasses"
+            className="text-white hover:text-brand-primary transition-colors"
+          >
+            Sun Glasses
+          </Link>
+          <Link
+            to="/category/men"
+            className="text-white hover:text-brand-primary transition-colors"
+          >
+            Men
+          </Link>
+          <Link
+            to="/category/women"
+            className="text-white hover:text-brand-primary transition-colors"
+          >
+            Women
+          </Link>
+          <Link
+            to="/category/lens"
+            className="text-white hover:text-brand-primary transition-colors"
+          >
+            Lens
+          </Link>
+          <Link
             to="/cart"
             className="text-white hover:text-brand-primary transition-colors relative"
           >
@@ -74,6 +98,34 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
               >
                 Shop
+              </Link>
+              <Link
+                to="/category/sun-glasses"
+                className="text-white hover:text-brand-primary transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Sun Glasses
+              </Link>
+              <Link
+                to="/category/men"
+                className="text-white hover:text-brand-primary transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Men
+              </Link>
+              <Link
+                to="/category/women"
+                className="text-white hover:text-brand-primary transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Women
+              </Link>
+              <Link
+                to="/category/lens"
+                className="text-white hover:text-brand-primary transition-colors"
+                onClick={() => setMenuOpen(false)}
+              >
+                Lens
               </Link>
               <Link
                 to="/cart"
