@@ -1,0 +1,13 @@
+/shop / 200
+/shop/* / 200
+/quote / 200
+/quote/* / 200
+/wishlist / 200
+/about / 200
+/contact / 200
+/faq / 200
+/shipping-returns / 200
+/privacy / 200
+/links / 200
+/admin / 200
+/admin/* / 200

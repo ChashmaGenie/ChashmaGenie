@@ -1,0 +1,13 @@
+{
+  "name": "ChashmaGenie",
+  "short_name": "ChashmaGenie",
+  "description": "See the World in Style",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF6EA",
+  "theme_color": "#0B1F2E",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon.png", "sizes": "150x150", "type": "image/png" }
+  ]
+}

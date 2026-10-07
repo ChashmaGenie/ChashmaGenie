@@ -1,0 +1,34 @@
+ChashmaGenie deploy notes (Cloudflare Pages, free plan)
+
+One-time setup
+1. npx wrangler login
+2. npx wrangler kv namespace create CHASHMA_KV
+   Copy the returned id into wrangler.toml (id and preview_id).
+3. npx wrangler pages project create chashmagenie --production-branch main
+4. npx wrangler pages secret put ADMIN_PASSWORD --project-name chashmagenie
+5. npx wrangler pages secret put SESSION_SECRET --project-name chashmagenie
+   Use a long random value, for example: openssl rand -hex 32
+6. In the Pages project settings, bind the KV namespace as CHASHMA_KV for Production and Preview.
+
+Deploy
+  npm run cf:deploy
+
+Local development
+  npm run dev        Vite on http://localhost:5173, proxies /api to port 8788
+  npm run dev:api    Pages Functions with local KV on http://localhost:8788 (needs a prior build)
+  npm run cf:dev     Build, then serve the full site and API on http://localhost:8788
+  Local secrets live in .dev.vars (gitignored). Copy .dev.vars.example to create it.
+
+Forgot the admin password
+  Run step 4 again with a new password. No redeploy is needed for secret changes to take effect on the next deployment.
+
+Recommended hardening
+  Add one Cloudflare rate-limiting rule (Security > WAF > Rate limiting) on POST /api/* and /api/admin/login. KV has no atomic counters, so the in-app limits are best effort under bursts.
+  Logging out revokes every admin session. Changing ADMIN_PASSWORD also signs everyone out.
+
+Free plan limits to respect
+  Functions: 100,000 requests/day. KV: 100,000 reads/day, 1,000 writes/day, values up to 25 MiB.
+  Static assets never invoke Functions. Public catalog and settings responses are edge-cached for 5 minutes.
+  Quotes and signups are stored one KV key each (no shared index), with a metadata copy for listing. Each accepted public request costs about 3 KV writes, so the app caps public submissions at 120 quotes and 60 signups per day to leave room for admin edits.
+  Uploaded product photos are served by a Function (/api/img/*), so each photo view that misses the browser cache counts as one Function request. Photos are cached for a year in browsers, but a cold /shop visit with 12 photos costs about 14 requests. Around 7,000 first-time visitors a day would reach the 100,000 limit. Move photos to R2 with a public bucket if traffic grows.
+  Unknown URLs return a real 404 (dist/404.html). Known app routes are rewritten to the app in public/_redirects: add new routes there.
