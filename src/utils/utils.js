@@ -1,1 +1,0 @@
-export const formatCurrency = (value) => `PKR ${value.toLocaleString()}`;

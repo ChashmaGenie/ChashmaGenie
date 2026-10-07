@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["shared/*"],
+      "@functions/*": ["functions/*"]
+    },
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "shared", "functions"]
+}

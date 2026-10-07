@@ -3,3 +3,8 @@ client/dist
 .DS_Store
 build
 node_modules
+dist
+.wrangler
+.dev.vars
+.env*
+*.log
